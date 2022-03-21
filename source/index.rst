@@ -6,8 +6,8 @@
 Welcome to AIModelShare's documentation!
 ========================================
 
-Getting Started 
---------------- 
+Installing the Library
+---------------------- 
 
 Download the AIModelShare library from PyPI: :: 
 
@@ -15,6 +15,18 @@ Download the AIModelShare library from PyPI: ::
 	! pip install aimodelshare
 
 To fully utilize the library functionality, you will need to set up credentials on the `AI Model Share website <https://www.modelshare.org/login>`_ and with `Amazon Web Services <https://aws.amazon.com/free>`_
+
+AI Model Share Tutorial
+-----------------------
+.. toctree::
+
+   gettingstarted
+
+AI Model Share Starter Packs
+----------------------------
+.. toctree::
+
+   starter_packs
 
 AI Model Share Classes
 ----------------------
