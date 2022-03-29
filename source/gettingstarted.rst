@@ -6,7 +6,7 @@ This tutorial will take you through the core functionality of the AI Model Share
 
 This tutorial is applicable for all new users, especially those that are interested in publishing their machine learning models on a live webpage to generate predictions, improving on existing models through the model collaboration process, and/or hosting a competition for other users. 
 
-If you have been invited to participate in an existing competition (or would like to submit a model to any of our ongoing public competitions), you may wish to skip to one of the Model Submission Guides as part of the :ref:`starter_packs`. 
+If you have been invited to participate in an existing competition (or would like to submit a model to any of our ongoing public competitions), you may wish to skip to one of the Model Submission Guides included in the :ref:`example_notebooks`. 
 
 The only materials to need to complete the tutorial are: a computer with an internet connection, an AI Model Share account `(create one here) <https://www.modelshare.org/login>`_ , and an Amazon Web Services account `(create one here). <https://aws.amazon.com/free>`_
 

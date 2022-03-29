@@ -22,11 +22,11 @@ AI Model Share Tutorial
 
    gettingstarted
 
-AI Model Share Starter Packs
-----------------------------
+AI Model Share Example Notebooks
+--------------------------------
 .. toctree::
 
-   starter_packs
+   example_notebooks
 
 AI Model Share Classes
 ----------------------
@@ -36,8 +36,8 @@ AI Model Share Classes
    competition
 
 
-AI Model Share Functions 
-------------------------
+AI Model Share Supporting Functions 
+-----------------------------------
 .. toctree::
 
    functions
@@ -60,9 +60,8 @@ Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
 
 License
 -------
-License Information here 
+AI | Model Share - All rights reserved. `Terms of Service <https://www.modelshare.org/terms-of-service>`_ and `Privacy Policy. <https://www.modelshare.org/privacy-policy>`_

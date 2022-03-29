@@ -1,5 +1,5 @@
-Functions
-=========
+Supporting Functions
+====================
 
 .. _configure_credentials:
 
