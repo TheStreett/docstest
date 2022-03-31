@@ -129,15 +129,3 @@ Sports Clips Classification
 
 	* `Quick Start Tutorial (Start here to Deploy) <https://www.modelshare.org/notebooks/notebook:302>`_
 	* `Model Submission Guide <https://www.modelshare.org/notebooks/notebook:303>`_
-
-
-.. toctree::
-   :hidden:
-
-   notebooks/Titanic_QST
-   notebooks/Titanic_MS_sklearn
-   notebooks/Titanic_MS_keras
-   notebooks/Titanic_MS_predictions_only
-   notebooks/Cars_QST.ipynb
-   notebooks/Cars_MS_sklearn.ipynb
-   notebooks/Cars_MS_keras.ipynb

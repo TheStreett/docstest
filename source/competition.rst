@@ -66,6 +66,9 @@ Import a model previously submitted to the competition leaderboard to use in you
 
    :return: Model chosen from leaderboard
 
+.. note::
+    If ``reproduce = True``, an untrained model will be instantiated, regardless of the ``trained`` parameter value.
+
 .. _inspect_model:
 
 inspect_model
