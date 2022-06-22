@@ -46,10 +46,21 @@ Launches a live prediction REST API for deploying ML models using model paramete
 Example ::
 
 	from aimodelshare import ModelPlayground
-	#Instantiate ModelPlayground() Class
-	myplayground=ModelPlayground(model_type="tabular", classification=True, private=True)
+
+	#Instantiate ModelPlayground() Class as placeholder 
+	myplayground=ModelPlayground(model_type="image", classification=True, private=True)
+
 	# Create Model Playground (generates live rest api and web-app for your model/preprocessor)
 	myplayground.deploy(model_filepath = "model.onnx", preprocessor_filepath = "preprocessor.zip", y_train_labels, exampledata) 
+
+
+Example :: 
+
+	# To instantiate a Model Playground that already exists: 
+	
+	myplayground=ModelPlayground(playground_url = "https://exampleapiurl.execute-api.us-east-1.amazonaws.com/prod/m")
+	
+	#You can find your Model Playground url under the "Programmatic" sub tab of the "Predict" page
 
 
 .. _create_competition:
@@ -103,26 +114,6 @@ Example ::
 
 	myplayground.update_runtime_model(model_version=1)
 
-.. _instantiate_model:
-
-instantiate_model
------------------
-
-Import a model previously submitted to the competition leaderboard to use in your session.
-
-.. py:function:: ModelPlayground.instantiate_model(version=None, trained=False, reproduce=False)
-
-   :param version: Model version number from competition leaderboard
-   :type version: integer
-   :param trained: if True, a trained model is instantiated, if False, the untrained model is instantiated
-   :type trained: bool, default=False
-   :param reproduce: Set to True to instantiate a model with reproducibility environment setup
-   :type reproduce: bool, default=False
-
-   :return: Model chosen from leaderboard.
-
-.. note::
-    If ``reproduce = True``, an untrained model will be instantiated, regardless of the ``trained`` parameter value.
 
 delete_deployment
 -----------------
