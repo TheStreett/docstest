@@ -1,0 +1,378 @@
+
+
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Supporting Functions &mdash; AIModelShare 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.min.css" type="text/css" />
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Advanced Features" href="advanced_features.html" />
+    <link rel="prev" title="Competition Class" href="competition.html" /> 
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a class="site-nav-toggle hidden-lg-up"><i class="icon-menu"></i></a>
+            <a class="site-title" href="index.html">
+                AIModelShare
+            </a>
+        </div>
+    </header>
+
+
+<div class="breadcrumbs-outer hidden-xs-down">
+    <div class="container">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="breadcrumbs">
+    
+      <li><a href="index.html">Docs</a></li>
+        
+      <li>Supporting Functions</li>
+    
+    
+      <li class="breadcrumbs-aside">
+        
+            
+            <a href="_sources/functions.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+</div>
+    </div>
+</div>
+    <div class="main-outer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3 site-nav">
+                    
+<div role="search">
+    <form class="search" action="search.html" method="get">
+        <div class="icon-input">
+            <input type="text" name="q" placeholder="Search" />
+            <span class="icon-search"></span>
+        </div>
+        <input type="submit" value="Go" class="d-hidden" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+                    <div class="site-nav-tree">
+                        
+                            
+                            
+                                <ul>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">AI Model Share Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#part-one-deploy-a-model-playground">Part One: Deploy a Model Playground</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#part-two-create-a-competition">Part Two: Create a Competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#part-three-maintaining-your-model-playground">Part Three: Maintaining your Model Playground</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="example_notebooks.html">Example Notebooks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="example_notebooks.html#tabular-classification">Tabular Classification:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_notebooks.html#tabular-regression">Tabular Regression:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_notebooks.html#text-classification">Text Classification:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_notebooks.html#image-classification">Image Classification:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_notebooks.html#video-classification">Video Classification:</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modelplayground.html">Model Playground Class</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modelplayground.html#activate">activate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modelplayground.html#deploy">deploy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modelplayground.html#create-competition">create_competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modelplayground.html#create-experiment">create_experiment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modelplayground.html#quick-submit">quick_submit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modelplayground.html#update-runtime-model">update_runtime_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modelplayground.html#update-example-data">update_example_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modelplayground.html#delete-deployment">delete_deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="competition.html">Competition Class</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#submit-model">submit_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#instantiate-model">instantiate_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#inspect-model">inspect_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#compare-models">compare_models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#stylize-compare">stylize_compare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#inspect-y-test">inspect_y_test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#get-leaderboard">get_leaderboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#stylize-leaderboard">stylize_leaderboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#update-access-list">update_access_list</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Supporting Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#configure-credentials">configure_credentials()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#set-credentials">set_credentials()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#download-data">download_data()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#export-eval-metric">export_eval_metric()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#export-reproducibility-env">export_reproducibility_env()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#share-dataset">share_dataset()</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="advanced_features.html">Advanced Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="advanced_features.html#custom-deployments">Custom Deployments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced_features.html#using-pyspark">Using PySpark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced_features.html#connecting-custom-web-apps">Connecting Custom Web Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced_features.html#model-reproducibility">Model Reproducibility</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">The AI Model Share Initiative</a></li>
+</ul>
+
+                            
+                        
+                    </div>
+                </div>
+                <div class="col-12 col-lg-9">
+                    <div class="document">
+                        
+                            
+  <section id="supporting-functions">
+<h1>Supporting Functions<a class="headerlink" href="#supporting-functions" title="Permalink to this heading">¶</a></h1>
+<section id="configure-credentials">
+<span id="id1"></span><h2>configure_credentials()<a class="headerlink" href="#configure-credentials" title="Permalink to this heading">¶</a></h2>
+<p>To build a credentials file
+you can use the <code class="docutils literal notranslate"><span class="pre">aimodelshare.aws.configure_credentials()</span></code> function:</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="aimodelshare.aws.configure_credentials">
+<span class="sig-prename descclassname"><span class="pre">aimodelshare.aws.</span></span><span class="sig-name descname"><span class="pre">configure_credentials</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aimodelshare.aws.configure_credentials" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a formatted credentials file built with user inputs.</p>
+</dd></dl>
+
+<p>Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate credentials file</span>
+<span class="kn">from</span> <span class="nn">aimodelshare.aws</span> <span class="kn">import</span> <span class="n">configure_credentials</span>
+
+<span class="n">configure_credentials</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="set-credentials">
+<span id="id2"></span><h2>set_credentials()<a class="headerlink" href="#set-credentials" title="Permalink to this heading">¶</a></h2>
+<p>Set credentials for all AI Model Share functions with
+the <code class="docutils literal notranslate"><span class="pre">aimodelshare.aws.set_credentials()</span></code> function:</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="aimodelshare.aws.set_credentials">
+<span class="sig-prename descclassname"><span class="pre">aimodelshare.aws.</span></span><span class="sig-name descname"><span class="pre">set_credentials</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">credential_file=&quot;credentials.txt&quot;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=&quot;submit_model&quot;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">apiurl</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aimodelshare.aws.set_credentials" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set credentials for AI Model Share and Amazon Web Services (AWS).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>credential_file</strong> (<em>string</em>) – Path to formatted credentials txt file.</p></li>
+<li><p><strong>type</strong> (<em>string</em>) – set to “deploy_model” to deploy a ModelPlayground.</p></li>
+<li><p><strong>apiurl</strong> (<em>string</em>) – unique api_url that powers a specific Model Playground.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Success Message.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Deploying ModelPlaygrounds - Requires AWS credentials</span>
+<span class="kn">from</span> <span class="nn">aimodelshare.aws</span> <span class="kn">import</span> <span class="n">set_credentials</span>
+<span class="n">set_credentials</span><span class="p">(</span><span class="n">credential_file</span><span class="o">=</span><span class="s2">&quot;credentials.txt&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;deploy_model&quot;</span><span class="p">)</span>
+
+<span class="c1"># Submitting Models to Competition - No AWS credentials required</span>
+<span class="kn">from</span> <span class="nn">aimodelshare.aws</span> <span class="kn">import</span> <span class="n">set_credentials</span>
+<span class="n">apiurl</span><span class="o">=</span><span class="s2">&quot;https://example.execute-api.us-east-1.amazonaws.com/prod/m&quot;</span>
+<span class="n">set_credentials</span><span class="p">(</span><span class="n">apiurl</span><span class="o">=</span><span class="n">apiurl</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="download-data">
+<span id="id3"></span><h2>download_data()<a class="headerlink" href="#download-data" title="Permalink to this heading">¶</a></h2>
+<p>Download data sets that have been shared to AI ModelShare with the <code class="docutils literal notranslate"><span class="pre">aimodelshare.data_sharing.download_data()</span></code> function:</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="aimodelshare.data_sharing.download_data">
+<span class="sig-prename descclassname"><span class="pre">aimodelshare.data_sharing.</span></span><span class="sig-name descname"><span class="pre">download_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repository</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aimodelshare.data_sharing.download_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Download data that has been shared to the AI ModelShare website.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>repository</strong> (<em>string</em>) – URI &amp; image_tag of uploaded data (provided with the create_competition method of the Model Playground class)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Success Message &amp; downloaded data directory</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aimodelshare</span> <span class="kn">import</span> <span class="n">download_data</span>
+<span class="n">download_data</span><span class="p">(</span><span class="s1">&#39;example-repository:image_tag&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="export-eval-metric">
+<h2>export_eval_metric()<a class="headerlink" href="#export-eval-metric" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="aimodelshare.custom_eval_metrics.export_eval_metric">
+<span class="sig-prename descclassname"><span class="pre">aimodelshare.custom_eval_metrics.</span></span><span class="sig-name descname"><span class="pre">export_eval_metric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eval_metric_fxn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aimodelshare.custom_eval_metrics.export_eval_metric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export evaluation metric and related objects into zip file for model deployment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>eval_metric_fxn</strong> (<em>string</em>) – name of eval metric function (should always be named “eval_metric” to work properly)</p></li>
+<li><p><strong>directory</strong> (<em>string</em>) – folderpath to eval metric function
+use “” to reference current working directory</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – name of the custom eval metric</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>file named ‘name.zip’ in the correct format for model deployment</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aimodelshare</span> <span class="kn">import</span> <span class="n">export_eval_metric</span>
+<span class="n">export_eval_metric</span><span class="p">(</span><span class="n">eval_metric_fxn</span><span class="p">,</span> <span class="n">directory</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="export-reproducibility-env">
+<h2>export_reproducibility_env()<a class="headerlink" href="#export-reproducibility-env" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="aimodelshare.reproducibility.export_reproducibility_env">
+<span class="sig-prename descclassname"><span class="pre">aimodelshare.reproducibility.</span></span><span class="sig-name descname"><span class="pre">export_reproducibility_env</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aimodelshare.reproducibility.export_reproducibility_env" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export development environment to enable reproducibility of your model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>seed</strong> (<em>Int</em>) – Random Seed</p></li>
+<li><p><strong>mode</strong> (<em>string</em>) – Processor - either “gpu” or “cpu”</p></li>
+</ul>
+</dd>
+<dt class="field-even">Directory<span class="colon">:</span></dt>
+<dd class="field-even"><p>Directory for completed json file</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>“./reproducibility.json” file to use with submit_model()</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aimodelshare</span> <span class="kn">import</span> <span class="n">export_reproducibility_env</span>
+<span class="n">export_eval_metric</span><span class="p">(</span><span class="n">seed</span><span class="p">,</span> <span class="n">directory</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="share-dataset">
+<span id="id4"></span><h2>share_dataset()<a class="headerlink" href="#share-dataset" title="Permalink to this heading">¶</a></h2>
+<p>Upload data sets to AI ModelShare with the <code class="docutils literal notranslate"><span class="pre">aimodelshare.data_sharing.share_dataset()</span></code> function:</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="aimodelshare.data_sharing.share_dataset">
+<span class="sig-prename descclassname"><span class="pre">aimodelshare.data_sharing.</span></span><span class="sig-name descname"><span class="pre">share_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_directory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'folder_file_path'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classification</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">private</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'FALSE'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aimodelshare.data_sharing.share_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upload data to the AI ModelShare website.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data_directory</strong> (<em>string</em>) – path to the file directory to upload.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Success Message</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aimodelshare.data_sharing.share_data</span> <span class="kn">import</span> <span class="n">share_dataset</span>
+<span class="n">share_dataset</span><span class="p">(</span><span class="n">data_directory</span> <span class="o">=</span> <span class="s2">&quot;example_path&quot;</span><span class="p">,</span> <span class="n">classification</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">private</span><span class="o">=</span><span class="s2">&quot;FALSE&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/sphinx_highlight.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+    <div class="footer" role="contentinfo">
+        <div class="container">
+            &#169; Copyright 2022, AIModelShare.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 6.1.3.
+        </div>
+    </div>  
+
+</body>
+</html>

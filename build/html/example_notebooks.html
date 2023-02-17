@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Example Notebooks &mdash; AIModelShare 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.min.css" type="text/css" />
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Model Playground Class" href="modelplayground.html" />
+    <link rel="prev" title="AI Model Share Tutorial" href="gettingstarted.html" /> 
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a class="site-nav-toggle hidden-lg-up"><i class="icon-menu"></i></a>
+            <a class="site-title" href="index.html">
+                AIModelShare
+            </a>
+        </div>
+    </header>
+
+
+<div class="breadcrumbs-outer hidden-xs-down">
+    <div class="container">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="breadcrumbs">
+    
+      <li><a href="index.html">Docs</a></li>
+        
+      <li>Example Notebooks</li>
+    
+    
+      <li class="breadcrumbs-aside">
+        
+            
+            <a href="_sources/example_notebooks.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+</div>
+    </div>
+</div>
+    <div class="main-outer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3 site-nav">
+                    
+<div role="search">
+    <form class="search" action="search.html" method="get">
+        <div class="icon-input">
+            <input type="text" name="q" placeholder="Search" />
+            <span class="icon-search"></span>
+        </div>
+        <input type="submit" value="Go" class="d-hidden" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+                    <div class="site-nav-tree">
+                        
+                            
+                            
+                                <ul>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">AI Model Share Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#part-one-deploy-a-model-playground">Part One: Deploy a Model Playground</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#part-two-create-a-competition">Part Two: Create a Competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#part-three-maintaining-your-model-playground">Part Three: Maintaining your Model Playground</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Example Notebooks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tabular-classification">Tabular Classification:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tabular-regression">Tabular Regression:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#text-classification">Text Classification:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#image-classification">Image Classification:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#video-classification">Video Classification:</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modelplayground.html">Model Playground Class</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modelplayground.html#activate">activate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modelplayground.html#deploy">deploy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modelplayground.html#create-competition">create_competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modelplayground.html#create-experiment">create_experiment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modelplayground.html#quick-submit">quick_submit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modelplayground.html#update-runtime-model">update_runtime_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modelplayground.html#update-example-data">update_example_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modelplayground.html#delete-deployment">delete_deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="competition.html">Competition Class</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#submit-model">submit_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#instantiate-model">instantiate_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#inspect-model">inspect_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#compare-models">compare_models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#stylize-compare">stylize_compare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#inspect-y-test">inspect_y_test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#get-leaderboard">get_leaderboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#stylize-leaderboard">stylize_leaderboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#update-access-list">update_access_list</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Supporting Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#configure-credentials">configure_credentials()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#set-credentials">set_credentials()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#download-data">download_data()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#export-eval-metric">export_eval_metric()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#export-reproducibility-env">export_reproducibility_env()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#share-dataset">share_dataset()</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="advanced_features.html">Advanced Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="advanced_features.html#custom-deployments">Custom Deployments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced_features.html#using-pyspark">Using PySpark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced_features.html#connecting-custom-web-apps">Connecting Custom Web Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced_features.html#model-reproducibility">Model Reproducibility</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">The AI Model Share Initiative</a></li>
+</ul>
+
+                            
+                        
+                    </div>
+                </div>
+                <div class="col-12 col-lg-9">
+                    <div class="document">
+                        
+                            
+  <section id="example-notebooks">
+<span id="id1"></span><h1>Example Notebooks<a class="headerlink" href="#example-notebooks" title="Permalink to this heading">¶</a></h1>
+<p>After completing the AI Model Share Tutorial, you can deploy Model Playgrounds and submit models for a variety of live data classification &amp; regression competitions.</p>
+<p>Choose a dataset that you would like to work with, and find everything you need included below. Notebooks can be downloaded or opened directly in Google Colab.</p>
+<p>(<em>Looking for PySpark?</em> Go <a class="reference internal" href="#tabular-class"><span class="std std-ref">here.</span></a>)</p>
+<section id="tabular-classification">
+<span id="tabular-class"></span><h2>Tabular Classification:<a class="headerlink" href="#tabular-classification" title="Permalink to this heading">¶</a></h2>
+<section id="titanic-dataset">
+<h3>Titanic Dataset<a class="headerlink" href="#titanic-dataset" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>“The sinking of the Titanic is one of the most infamous shipwrecks in history. On April 15, 1912, during her maiden voyage, the widely considered “unsinkable” RMS Titanic sank after colliding with an iceberg. Unfortunately, there weren’t enough lifeboats for everyone onboard, resulting in the death of 1502 out of 2224 passengers and crew. While there was some element of luck involved in surviving, it seems some groups of people were more likely to survive than others.” Use data about the passengers on board to determine whether they were likely to survive the shipwreck or not.</p>
+<p><em>Dataset and description adapted from: Kaggle GettingStarted Prediction Competition. (2012, September). Titanic - Machine Learning from Disaster, Version 1. Retrieved September 7, 2021 from https://www.kaggle.com/c/titanic/data.</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.modelshare.org/notebooks/notebook:304">Quick Start Tutorial (Start here to Deploy)</a></p></li>
+<li><p><a class="reference external" href="https://www.modelshare.org/notebooks/notebook:366">Quick Start Tutorial with PySpark</a></p></li>
+<li><p><a class="reference external" href="https://www.modelshare.org/notebooks/notebook:305">Model Submission Guide: sklearn</a></p></li>
+<li><p><a class="reference external" href="https://www.modelshare.org/notebooks/notebook:306">Model Submission Guide: Deep Learning</a></p></li>
+<li><p><a class="reference external" href="https://www.modelshare.org/notebooks/notebook:319">Model Submission Guide: Predictions Only (no model metadata extracted)</a></p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="tabular-regression">
+<span id="tabular-reg"></span><h2>Tabular Regression:<a class="headerlink" href="#tabular-regression" title="Permalink to this heading">¶</a></h2>
+<section id="used-car-sales-price-dataset">
+<h3>Used Car Sales Price Dataset<a class="headerlink" href="#used-car-sales-price-dataset" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>Cars notoriously lose value as soon as they are purchased. However, the resell value of any particular car depends on many factors, including make, model, miles driven, transmission type, the number of owners, and more. Use this dataset to predict the resell value of used cars based on their features.</p>
+<p><em>Dataset adapted from: Birla, Nehal, Nishant Verma, and Nikhil Kushwaha. (June, 2018). Vehicle dataset, Version 3. Retrieved September 14, 2021 from https://www.kaggle.com/nehalbirla/vehicle-dataset-from-cardekho.</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.modelshare.org/notebooks/notebook:285">Quick Start Tutorial (Start here to Deploy)</a></p></li>
+<li><p><a class="reference external" href="https://www.modelshare.org/notebooks/notebook:286">Model Submission Guide: sklearn</a></p></li>
+<li><p><a class="reference external" href="https://www.modelshare.org/notebooks/notebook:287">Model Submission Guide: Deep Learning</a></p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="text-classification">
+<span id="text-class"></span><h2>Text Classification:<a class="headerlink" href="#text-classification" title="Permalink to this heading">¶</a></h2>
+<section id="covid-misinformation-identification">
+<h3>Covid Misinformation Identification<a class="headerlink" href="#covid-misinformation-identification" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>“The significance of social media has increased manifold in the past few decades as it helps people from even the most remote corners of the world stay connected. With the COVID-19 pandemic raging, social media has become more relevant and widely used than ever before, and along with this, there has been a resurgence in the circulation of fake news and tweets that demand immediate attention.” Use this dataset to read COVID-19 related tweets and determine if the information they present is “real” or “fake”.</p>
+<p><em>Description and dataset adapted from: Sourya Dipta Das, Ayan Basak, and Saikat Dutta. “A Heuristic-driven Ensemble Framework for COVID-19 Fake News Detection”. arXiv preprint arXiv:2101.03545. 2021. Retrieved from https://github.com/diptamath/covid_fake_news/tree/main/data.</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.modelshare.org/notebooks/notebook:290">Quick Start Tutorial (Start here to Deploy)</a></p></li>
+<li><p><a class="reference external" href="https://www.modelshare.org/notebooks/notebook:291">Model Submission Guide: sklearn</a></p></li>
+<li><p><a class="reference external" href="https://www.modelshare.org/notebooks/notebook:292">Model Submission Guide: Deep Learning</a></p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="clickbait-identification">
+<h3>Clickbait Identification<a class="headerlink" href="#clickbait-identification" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>“In the online world, many media outlets have to generate revenue from the clicks made by their readers, and due to the presence of numerous such outlets, they have to compete with each other for reader attention. To attract the readers to click on an article and visit the media site, they often come up with catchy headlines accompanying the article links, which lure the readers to click on the link. Such headlines are known as Clickbaits. While these baits may trick the readers into clicking, in the long-run, clickbaits usually don’t live up to the expectation of the readers and leave them disappointed.” Use this dataset to read headlines from multiple media outlets and identify whether they represent clickbait or substantive news.</p>
+<p><em>Dataset and description adapted From: Abhijnan Chakraborty, Bhargavi Paranjape, Sourya Kakarla, and Niloy Ganguly. “Stop Clickbait: Detecting and Preventing Clickbaits in Online News Media”. In Proceedings of the 2016 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM), San Fransisco, US, August 2016.</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.modelshare.org/notebooks/notebook:288">Quick Start Tutorial (Start here to Deploy)</a></p></li>
+<li><p><a class="reference external" href="https://www.modelshare.org/notebooks/notebook:289">Model Submission Guide</a></p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="imdb-movie-review-identification">
+<h3>IMDB Movie Review Identification<a class="headerlink" href="#imdb-movie-review-identification" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>IMDb, also knows as the Internet Movie Database, is an online database of movies, TV shows, celebrities, and awards. Registered users can write reviews and rate content that they’ve seen. Use this dataset to classify 50,000 ‘highly polarized’ movie reviews as positive or negative.</p>
+<p><em>Andrew L. Maas, Raymond E. Daly, Peter T. Pham, Dan Huang, Andrew Y. Ng, and Christopher Potts. (2011). Learning Word Vectors for Sentiment Analysis. The 49th Annual Meeting of the Association for Computational Linguistics (ACL 2011).</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.modelshare.org/notebooks/notebook:300">Quick Start Tutorial (Start here to Deploy)</a></p></li>
+<li><p><a class="reference external" href="https://www.modelshare.org/notebooks/notebook:301">Model Submission Guide</a></p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="image-classification">
+<span id="image-class"></span><h2>Image Classification:<a class="headerlink" href="#image-classification" title="Permalink to this heading">¶</a></h2>
+<section id="dog-breed-classification">
+<h3>Dog Breed Classification<a class="headerlink" href="#dog-breed-classification" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>This dataset contains pictures from 6 different dog breeds, adapted from the original dataset with 120 different dog breeds from around the world. Use this dataset to look at images of dogs and determine which breed they belong to.</p>
+<p><em>Dataset adapted from: Aditya Khosla, Nityananda Jayadevaprakash, Bangpeng Yao and Li Fei-Fei. Novel dataset for Fine-Grained Image Categorization. First Workshop on Fine-Grained Visual Categorization (FGVC), IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2011. Retrieved from http://vision.stanford.edu/aditya86/ImageNetDogs/</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.modelshare.org/notebooks/notebook:293">Quick Start Tutorial (Start here to Deploy)</a></p></li>
+<li><p><a class="reference external" href="https://www.modelshare.org/notebooks/notebook:294">Model Submission Guide</a></p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="fashion-mnist-classification">
+<h3>Fashion MNIST Classification<a class="headerlink" href="#fashion-mnist-classification" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>An updated version of the iconic handwritten digits MNIST dataset. Fashion-MNIST is a dataset of Zalando’s article images—consisting of a training set of 60,000 examples and a test set of 10,000 examples. Each example is a 28x28 grayscale image, associated with a label from one of 10 classes.</p>
+<p><em>Fashion-MNIST: a Novel Image Dataset for Benchmarking Machine Learning Algorithms. Han Xiao, Kashif Rasul, Roland Vollgraf. arXiv:1708.07747</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.modelshare.org/notebooks/notebook:295">Quick Start Tutorial (Start here to Deploy)</a></p></li>
+<li><p><a class="reference external" href="https://www.modelshare.org/notebooks/notebook:296">Model Submission Guide</a></p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="flower-classification">
+<h3>Flower Classification<a class="headerlink" href="#flower-classification" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>A dataset containing pictures of 5 different classes of flowers.</p>
+<p><em>The Tensorflow Team. (2019, January). Flowers. http://download.tensorflow.org/example_images/flower_photos.tgz</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.modelshare.org/notebooks/notebook:297">Quick Start Tutorial (Start here to Deploy)</a></p></li>
+<li><p><a class="reference external" href="https://www.modelshare.org/notebooks/notebook:299">Model Submission Guide</a></p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="video-classification">
+<span id="video-class"></span><h2>Video Classification:<a class="headerlink" href="#video-classification" title="Permalink to this heading">¶</a></h2>
+<section id="sports-clips-classification">
+<h3>Sports Clips Classification<a class="headerlink" href="#sports-clips-classification" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>Video clips of people doing pull-ups, kayaking, and horseback riding. Use this dataset to watch video clips and determine which of three activities are taking place.</p>
+<p><em>Dataset adapted from: Soomro, K., Zamir, A. R., &amp; Sha, M. (2012). UCF101: A Dataset of 101 Human Actions Classes From Videos in The Wild. Center for Research in Computer Vision, University of Central Florida. https://arxiv.org/pdf/1212.0402v1.pdf</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.modelshare.org/notebooks/notebook:302">Quick Start Tutorial (Start here to Deploy)</a></p></li>
+<li><p><a class="reference external" href="https://www.modelshare.org/notebooks/notebook:303">Model Submission Guide</a></p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/sphinx_highlight.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+    <div class="footer" role="contentinfo">
+        <div class="container">
+            &#169; Copyright 2022, AIModelShare.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 6.1.3.
+        </div>
+    </div>  
+
+</body>
+</html>

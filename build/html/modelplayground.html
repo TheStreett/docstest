@@ -1,0 +1,479 @@
+
+
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Model Playground Class &mdash; AIModelShare 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.min.css" type="text/css" />
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Competition Class" href="competition.html" />
+    <link rel="prev" title="Example Notebooks" href="example_notebooks.html" /> 
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a class="site-nav-toggle hidden-lg-up"><i class="icon-menu"></i></a>
+            <a class="site-title" href="index.html">
+                AIModelShare
+            </a>
+        </div>
+    </header>
+
+
+<div class="breadcrumbs-outer hidden-xs-down">
+    <div class="container">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="breadcrumbs">
+    
+      <li><a href="index.html">Docs</a></li>
+        
+      <li>Model Playground Class</li>
+    
+    
+      <li class="breadcrumbs-aside">
+        
+            
+            <a href="_sources/modelplayground.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+</div>
+    </div>
+</div>
+    <div class="main-outer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3 site-nav">
+                    
+<div role="search">
+    <form class="search" action="search.html" method="get">
+        <div class="icon-input">
+            <input type="text" name="q" placeholder="Search" />
+            <span class="icon-search"></span>
+        </div>
+        <input type="submit" value="Go" class="d-hidden" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+                    <div class="site-nav-tree">
+                        
+                            
+                            
+                                <ul>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">AI Model Share Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#part-one-deploy-a-model-playground">Part One: Deploy a Model Playground</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#part-two-create-a-competition">Part Two: Create a Competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#part-three-maintaining-your-model-playground">Part Three: Maintaining your Model Playground</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="example_notebooks.html">Example Notebooks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="example_notebooks.html#tabular-classification">Tabular Classification:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_notebooks.html#tabular-regression">Tabular Regression:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_notebooks.html#text-classification">Text Classification:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_notebooks.html#image-classification">Image Classification:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_notebooks.html#video-classification">Video Classification:</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Model Playground Class</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#activate">activate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deploy">deploy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-competition">create_competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-experiment">create_experiment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#quick-submit">quick_submit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#update-runtime-model">update_runtime_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#update-example-data">update_example_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delete-deployment">delete_deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="competition.html">Competition Class</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#submit-model">submit_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#instantiate-model">instantiate_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#inspect-model">inspect_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#compare-models">compare_models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#stylize-compare">stylize_compare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#inspect-y-test">inspect_y_test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#get-leaderboard">get_leaderboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#stylize-leaderboard">stylize_leaderboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="competition.html#update-access-list">update_access_list</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Supporting Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#configure-credentials">configure_credentials()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#set-credentials">set_credentials()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#download-data">download_data()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#export-eval-metric">export_eval_metric()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#export-reproducibility-env">export_reproducibility_env()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#share-dataset">share_dataset()</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="advanced_features.html">Advanced Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="advanced_features.html#custom-deployments">Custom Deployments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced_features.html#using-pyspark">Using PySpark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced_features.html#connecting-custom-web-apps">Connecting Custom Web Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced_features.html#model-reproducibility">Model Reproducibility</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">The AI Model Share Initiative</a></li>
+</ul>
+
+                            
+                        
+                    </div>
+                </div>
+                <div class="col-12 col-lg-9">
+                    <div class="document">
+                        
+                            
+  <section id="model-playground-class">
+<h1>Model Playground Class<a class="headerlink" href="#model-playground-class" title="Permalink to this heading">¶</a></h1>
+<p>Deployed models receive an individual Model Playground. Each Model Playground uses a personal REST API to provide a fully functional prediction dashboard that allows end-users to input text, tabular, or image data and receive live predictions.</p>
+<p>Moreover, users can build on Model Playgrounds by:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Creating ML model competitions</p></li>
+<li><p>Uploading Jupyter notebooks to share code</p></li>
+<li><p>Sharing model architectures, and</p></li>
+<li><p>Sharing data… with all shared artifacts automatically creating a data science user portfolio.</p></li>
+</ol>
+</div></blockquote>
+<section id="activate">
+<span id="id1"></span><h2>activate<a class="headerlink" href="#activate" title="Permalink to this heading">¶</a></h2>
+<p>Launches a live model playground to the www.modelshare.org website. The playground can optionally include a live prediction REST API for deploying ML models using model parameters and user credentials, provided by the user.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="ModelPlayground.activate">
+<span class="sig-prename descclassname"><span class="pre">ModelPlayground.</span></span><span class="sig-name descname"><span class="pre">activate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_filepat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preprocessor_filepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">example_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_libraries</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reproducibility_env_filepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">onnx_timeout</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pyspark_support</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_input</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ModelPlayground.activate" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_filepath</strong> (<em>string</em>) – Absolute path to model file. .onnx is the only accepted model file extension. “example_model.onnx” filename for file in directory. “/User/xyz/model/example_model.onnx” absolute path to model file from local directory. If no value is set the playground will be launched with only a placeholder prediction API.</p></li>
+<li><p><strong>preprocessor_filepath</strong> (<em>string</em>) – Absolute path to preprocessor file. Should be: “./preprocessor.zip”. searches for an exported zip preprocessor file in the current directory. File is generated using export_preprocessor function from the AI Modelshare library. If no value is set the playground will be launched with only a placeholder prediction API.</p></li>
+<li><p><strong>y_train</strong> (<em>pandas dataframe</em><em> of </em><em>one hot encoded y train data for classification</em><em>, or </em><em>list</em><em> of </em><em>values for regression</em>) – training labels for classification models.</p></li>
+<li><p><strong>example_data</strong> (<em>pandas DataFrame</em><em> (</em><em>for tabular &amp; text data</em><em>) </em><em>OR filepath as string</em><em> (</em><em>image</em><em>, </em><em>audio</em><em>, </em><em>video data</em><em>)</em>) – Example of X data that will be shown on the online Playground page. if no example data is submitted, certain functionalities may be limited, including the deployment of live prediction APIs. Example data can be updated at a later stage, using the update_example_data() method.` For tabular data - provide pandas DataFrame in same structure expected by preprocessor function. Other data types - absolute path to folder containing example data (first five files with relevant file extensions will be accepted).</p></li>
+<li><p><strong>custom_libraries</strong> (<em>string</em>) – “TRUE” if user wants to load custom Python libraries to their prediction runtime. “FALSE” if user wishes to use AI Model Share base libraries including latest versions of most common ML libs.</p></li>
+<li><p><strong>onnx_timeout</strong> (<em>int</em>) – Time in seconds after which ONNX conversion should be interrupted.
+Set to False if you want to force ONNX conversion.</p></li>
+<li><p><strong>model_input</strong> (<em>array_like</em>) – Required only when framework=”pytorch”
+One example of X training data in correct format.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>prints statements with generated model playground page and live prediction API details
+also prints steps to update the model submissions by the user/team</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="deploy">
+<span id="id2"></span><h2>deploy<a class="headerlink" href="#deploy" title="Permalink to this heading">¶</a></h2>
+<p>Launches a live prediction REST API for deploying ML models using model parameters and user credentials.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="ModelPlayground.deploy">
+<span class="sig-prename descclassname"><span class="pre">ModelPlayground.</span></span><span class="sig-name descname"><span class="pre">deploy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_filepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preprocessor_filepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">example_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_libraries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'FALSE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reproducibility_env_filepath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ModelPlayground.deploy" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_filepath</strong> (<em>string</em>) – Absolute path to model file. .onnx is the only accepted model file extension.
+“example_model.onnx” filename for file in directory.
+“/User/xyz/model/example_model.onnx” absolute path to model file from local directory</p></li>
+<li><p><strong>preprocessor_filepath</strong> (<em>string</em>) – absolute path to preprocessor file. [REQUIRED] to be set by the user. Should be: “./preprocessor.zip”. searches for an exported zip preprocessor file in the current directory. File is generated using export_preprocessor function from the AI Modelshare library</p></li>
+<li><p><strong>y_train</strong> (<em>pandas dataframe</em><em> of </em><em>one hot encoded y train data for classification</em><em>, or </em><em>list</em><em> of </em><em>values for regression</em>) – training labels for classification models. [REQUIRED] for classification type models</p></li>
+<li><p><strong>custom_libraries</strong> (<em>string</em>) – “TRUE” if user wants to load custom Python libraries to their prediction runtime. “FALSE” if user wishes to use AI Model Share base libraries including latest versions of most common ML libs.</p></li>
+<li><p><strong>example_data</strong> (<em>String</em>) – Tabular data - pandas DataFrame in same structure expected by preprocessor function. Other data types - absolute path to folder containing example data (first five files with relevant file extensions will be accepted). REQUIRED for tabular data</p></li>
+<li><p><strong>reproducibility_env_filepath</strong> – [OPTIONAL] to be set by the user- absolute path to environment environment json file. Example:  “./reproducibility.json”. File is generated using export_reproducibility_env function from the AI Modelshare library</p></li>
+<li><p><strong>memory</strong> (<em>Int</em>) – The amount of memory (in megabytes) to be allocated to the lambda function (default = 1024).</p></li>
+<li><p><strong>timeout</strong> (<em>Int</em>) – Number of seconds before the lambda times out (default = 30).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Prints statements with generated live prediction API details
+also prints steps to update the model submissions by the user/team</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aimodelshare</span> <span class="kn">import</span> <span class="n">ModelPlayground</span>
+
+<span class="c1">#Instantiate ModelPlayground() Class as placeholder</span>
+<span class="n">myplayground</span><span class="o">=</span><span class="n">ModelPlayground</span><span class="p">(</span><span class="n">model_type</span><span class="o">=</span><span class="s2">&quot;image&quot;</span><span class="p">,</span> <span class="n">classification</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">private</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Create Model Playground (generates live rest api and web-app for your model/preprocessor)</span>
+<span class="n">myplayground</span><span class="o">.</span><span class="n">deploy</span><span class="p">(</span><span class="n">model_filepath</span> <span class="o">=</span> <span class="s2">&quot;model.onnx&quot;</span><span class="p">,</span> <span class="n">preprocessor_filepath</span> <span class="o">=</span> <span class="s2">&quot;preprocessor.zip&quot;</span><span class="p">,</span> <span class="n">y_train_labels</span><span class="p">,</span> <span class="n">exampledata</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># To instantiate a Model Playground that already exists:</span>
+
+<span class="n">myplayground</span><span class="o">=</span><span class="n">ModelPlayground</span><span class="p">(</span><span class="n">playground_url</span> <span class="o">=</span> <span class="s2">&quot;https://exampleapiurl.execute-api.us-east-1.amazonaws.com/prod/m&quot;</span><span class="p">)</span>
+
+<span class="c1">#You can find your Model Playground url under the &quot;Programmatic&quot; sub tab of the &quot;Predict&quot; page</span>
+</pre></div>
+</div>
+</section>
+<section id="create-competition">
+<span id="id3"></span><h2>create_competition<a class="headerlink" href="#create-competition" title="Permalink to this heading">¶</a></h2>
+<p>Creates a model competition for a deployed prediction REST API</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="ModelPlayground.create_competition">
+<span class="sig-prename descclassname"><span class="pre">ModelPlayground.</span></span><span class="sig-name descname"><span class="pre">create_competition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_directory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eval_metric_filepath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">public</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ModelPlayground.create_competition" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_test</strong> (<em>list</em>) – y values for test data used to generate metrics from predicted values from X test data submitted via the submit_model() function. [REQUIRED] to generate eval metrics in competition leaderboard</p></li>
+<li><p><strong>data_directory</strong> (<em>string</em>) – Path to folder storing training data and test data (excluding Y test data)</p></li>
+<li><p><strong>eval_metric_filepath</strong> (<em>string</em>) – [OPTIONAL] Filepath pointing to a zipfile containing custom evaluation functions exported with export_eval_metric()</p></li>
+<li><p><strong>email_list</strong> (<em>List</em><em> of </em><em>strings</em>) – [OPTIONAL] list of comma separated emails for users who are allowed to submit models to competition.</p></li>
+<li><p><strong>public</strong> (<em>Boolean</em>) – [REQUIRED] True/false. Defaults to False.  If True, competition is public and ANY AIModelShare user can submit models.  Use with caution because one model and one preprocessor file will be be saved to your AWS S3 folder for each model submission.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Information about how to submit models to competition</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create Competition</span>
+<span class="c1"># Note -- Make competition public (allow any AI Model Share user to submit models)</span>
+<span class="c1"># .... by excluding the email_list argument and including the &#39;public=True&#39; argument</span>
+<span class="n">myplayground</span><span class="o">.</span><span class="n">create_competition</span><span class="p">(</span><span class="n">data_directory</span><span class="o">=</span><span class="s1">&#39;my_competition_data_folder&#39;</span><span class="p">,</span>
+                        <span class="n">y_test</span> <span class="o">=</span> <span class="n">y_test_labels</span><span class="p">,</span>
+                        <span class="n">email_list</span><span class="o">=</span><span class="n">emaillist</span><span class="p">)</span>
+                        <span class="n">public</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="create-experiment">
+<h2>create_experiment<a class="headerlink" href="#create-experiment" title="Permalink to this heading">¶</a></h2>
+<p>Creates an experiment for a deployed prediction REST API</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="create_experiment">
+<span class="sig-name descname"><span class="pre">create_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_directory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eval_metric_filepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">public</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">public_private_split</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#create_experiment" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_test</strong> (<em>list</em>) – y values for test data used to generate metrics from predicted values from X test data submitted via the submit_model() function. [REQUIRED] to generate eval metrics in experiment leaderboard</p></li>
+<li><p><strong>data_directory</strong> (<em>string</em>) – Path to folder storing training data and test data (excluding Y test data)</p></li>
+<li><p><strong>eval_metric_filepath</strong> (<em>string</em>) – [OPTIONAL] Filepath pointing to a zipfile containing custom evaluation functions exported with export_eval_metric()</p></li>
+<li><p><strong>email_list</strong> (<em>List</em><em> of </em><em>strings</em>) – [OPTIONAL] list of comma separated emails for users who are allowed to submit models to competition.</p></li>
+<li><p><strong>public</strong> (<em>Boolean</em>) – [REQUIRED] True/false. Defaults to False.  If True, competition is public and ANY AIModelShare user can submit models.  Use with caution because one model and one preprocessor file will be be saved to your AWS S3 folder for each model submission.</p></li>
+<li><p><strong>public_private_split</strong> (<em>Float between 0 and 1.</em>) – [REQUIRED] Defaults to 0. Proportion of test data that is allocated to private hold-out set.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Information about how to submit models to experiment</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create Experiment</span>
+<span class="c1"># Note -- Make experiment public (allow any AI Model Share user to submit models)</span>
+<span class="c1"># .... by excluding the email_list argument and including the &#39;public=True&#39; argument</span>
+<span class="n">myplayground</span><span class="o">.</span><span class="n">create_experiment</span><span class="p">(</span><span class="n">data_directory</span><span class="o">=</span><span class="s1">&#39;my_experiment_data_folder&#39;</span><span class="p">,</span>
+                        <span class="n">y_test</span> <span class="o">=</span> <span class="n">y_test_labels</span><span class="p">,</span>
+                        <span class="n">email_list</span><span class="o">=</span><span class="n">emaillist</span><span class="p">)</span>
+                        <span class="n">public</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="quick-submit">
+<h2>quick_submit<a class="headerlink" href="#quick-submit" title="Permalink to this heading">¶</a></h2>
+<p>Submits model/preprocessor to machine learning experiment leaderboard and model architecture database using live prediction API url generated by AI Modelshare library. The submitted model gets evaluated and compared with all existing models and a leaderboard can be generated</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="quick_submit">
+<span class="sig-name descname"><span class="pre">quick_submit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_filepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preprocessor_filepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prediction_submission</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_directory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eval_metric_filepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">public</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">public_private_split</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">onnx_timeout</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">example_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quick_submit" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_filepath</strong> (<em>string</em>) – <dl class="simple">
+<dt>Absolute path to model file. </dt><dd><p>.onnx is the only accepted model file extension.
+“example_model.onnx” filename for file in directory.
+“/User/xyz/model/example_model.onnx” absolute path to model file from local directory</p>
+</dd>
+</dl>
+<p>If no value is set the playground will be launched with only a placeholder prediction API.</p>
+</p></li>
+<li><p><strong>preprocessor_filepath</strong> (<em>string</em>) – Absolute path to preprocessor file. Should be: “./preprocessor.zip”. searches for an exported zip preprocessor file in the current directory. File is generated using export_preprocessor function from the AI Modelshare library. If no value is set the playground will be launched with only a placeholder prediction API.</p></li>
+<li><p><strong>y_test</strong> (<em>list</em>) – y values for test data used to generate metrics from predicted values from X test data submitted via the submit_model() function. [REQUIRED] to generate eval metrics in experiment leaderboard</p></li>
+<li><p><strong>data_directory</strong> (<em>string</em>) – Path to folder storing training data and test data (excluding Y test data)</p></li>
+<li><p><strong>eval_metric_filepath</strong> (<em>string</em>) – [OPTIONAL] Filepath pointing to a zipfile containing custom evaluation functions exported with export_eval_metric()</p></li>
+<li><p><strong>email_list</strong> (<em>List</em><em> of </em><em>strings</em>) – [OPTIONAL] list of comma separated emails for users who are allowed to submit models to competition.</p></li>
+<li><p><strong>public</strong> (<em>Boolean</em>) – [REQUIRED] True/false. Defaults to False.  If True, competition is public and ANY AIModelShare user can submit models.  Use with caution because one model and one preprocessor file will be be saved to your AWS S3 folder for each model submission.</p></li>
+<li><p><strong>public_private_split</strong> (<em>Float between 0 and 1.</em>) – [REQUIRED] Defaults to 0. Proportion of test data that is allocated to private hold-out set.</p></li>
+<li><p><strong>onnx_timeout</strong> (<em>int</em>) – Time in seconds after which ONNX conversion should be interrupted.
+Set to False if you want to force ONNX conversion.</p></li>
+<li><p><strong>model_input</strong> (<em>array_like</em>) – Required only when framework=”pytorch”
+One example of X training data in correct format.</p></li>
+<li><p><strong>example_data</strong> (<em>pandas DataFrame</em><em> (</em><em>for tabular &amp; text data</em><em>) </em><em>OR filepath as string</em><em> (</em><em>image</em><em>, </em><em>audio</em><em>, </em><em>video data</em><em>)</em>) – Example of X data that will be shown on the online Playground page. if no example data is submitted, certain functionalities may be limited, including the deployment of live prediction APIs. Example data can be updated at a later stage, using the update_example_data() method.` For tabular data - provide pandas DataFrame in same structure expected by preprocessor function. Other data types - absolute path to folder containing example data (first five files with relevant file extensions will be accepted).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Model version if the model is submitted sucessfully
+error  if there is any error while submitting models</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="update-runtime-model">
+<span id="id4"></span><h2>update_runtime_model<a class="headerlink" href="#update-runtime-model" title="Permalink to this heading">¶</a></h2>
+<p>Updates the prediction API behind the Model Playground with a new model from the leaderboard and verifies Model Playground performance metrics.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="update_runtime_model">
+<span class="sig-name descname"><span class="pre">update_runtime_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#update_runtime_model" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>model_version</strong> (<em>integer</em>) – model version number from competition leaderboard</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Success message when the model and preprocessor are updated successfully.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">myplayground</span><span class="o">.</span><span class="n">update_runtime_model</span><span class="p">(</span><span class="n">model_version</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="update-example-data">
+<span id="update-example-datal"></span><h2>update_example_data<a class="headerlink" href="#update-example-data" title="Permalink to this heading">¶</a></h2>
+<p>Updates example data associated with a model playground prediction API.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="update_example_data">
+<span class="sig-name descname"><span class="pre">update_example_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">example_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#update_example_data" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>example_data</strong> (<em>pandas DataFrame</em><em> (</em><em>for tabular &amp; text data</em><em>) </em><em>OR filepath as string</em><em> (</em><em>image</em><em>, </em><em>audio</em><em>, </em><em>video data</em><em>)</em>) – Example of X data that will be shown on the online Playground page. If no example data is submitted, certain functionalities may be limited, including the deployment of live prediction APIs. Example data can be updated at a later stage, using the update_example_data() method.` For tabular data - provide pandas DataFrame in same structure expected by preprocessor function. Other data types - absolute path to folder containing example data (first five files with relevant file extensions will be accepted).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>“Success” upon successful request</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">myplayground</span><span class="o">.</span><span class="n">update_example_data</span><span class="p">(</span><span class="n">example_tabular_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="delete-deployment">
+<h2>delete_deployment<a class="headerlink" href="#delete-deployment" title="Permalink to this heading">¶</a></h2>
+<p>Delete all components of a Model Playground, including: AWS s3 bucket &amp; contents, attached competitions, prediction REST API, and interactive Model Playground web dashboard.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="ModelPlayground.delete_deployment">
+<span class="sig-prename descclassname"><span class="pre">ModelPlayground.</span></span><span class="sig-name descname"><span class="pre">delete_deployment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">playground_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ModelPlayground.delete_deployment" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>playground_url</strong> (<em>string</em>) – API URL that the user wishes to delete. WARNING: User must own an API in order to delete it.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Success message when deployment is deleted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">myplayground</span><span class="o">.</span><span class="n">delete_deployment</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/sphinx_highlight.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+    <div class="footer" role="contentinfo">
+        <div class="container">
+            &#169; Copyright 2022, AIModelShare.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 6.1.3.
+        </div>
+    </div>  
+
+</body>
+</html>
